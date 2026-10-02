@@ -1,0 +1,94 @@
+.card {
+  background: #1a1a2e;
+  color: #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  font-family: system-ui, -apple-system, sans-serif;
+  margin-top: 10px;
+}
+
+.header {
+  background: #0d47a1;
+  padding: 10px 16px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #bbdefb;
+}
+
+.primary {
+  padding: 18px 16px 14px;
+  border-bottom: 1px solid #1e3a5f;
+  text-align: center;
+}
+
+.primaryLabel {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #90caf9;
+  margin-bottom: 6px;
+}
+
+.primaryValue {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #4fc3f7;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.primarySub {
+  font-size: 0.78rem;
+  color: #80deea;
+  margin-top: 4px;
+}
+
+.breakdown {
+  padding: 8px 14px;
+  border-bottom: 1px solid #1e3a5f;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #0d1b2a;
+}
+
+.row:last-child { border-bottom: none; }
+.row span:first-child { color: #90a4ae; }
+.row span:last-child  { font-weight: 600; color: #e0e0e0; }
+
+.perimeter {
+  padding: 12px 16px;
+  border-bottom: 1px solid #1e3a5f;
+}
+
+.perimLabel {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #90caf9;
+  margin-bottom: 4px;
+}
+
+.perimValue {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #80cbc4;
+}
+
+.footer {
+  padding: 10px 16px;
+  font-size: 0.82rem;
+  color: #90a4ae;
+}
+
+.footer strong {
+  color: #4fc3f7;
+}

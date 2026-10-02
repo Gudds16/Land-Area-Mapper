@@ -1,0 +1,169 @@
+/* ─── Global Reset ──────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ─── App Layout: sidebar + map side-by-side ────────────────────────────────── */
+.app-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* ─── Sidebar ────────────────────────────────────────────────────────────────── */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  min-width: 280px;
+  max-width: 320px;
+  height: 100vh;
+  overflow-y: auto;
+  background: #1a1a2e;
+  flex-shrink: 0;
+}
+
+.result-container {
+  padding: 0 16px 16px;
+}
+
+/* ─── Map Area ───────────────────────────────────────────────────────────────── */
+.map-area {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Crosshair cursor when marking is active */
+.cursor-crosshair {
+  cursor: crosshair !important;
+}
+
+/* ─── Loading State ─────────────────────────────────────────────────────────── */
+.map-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0d1b2a;
+  color: #4fc3f7;
+  gap: 16px;
+  z-index: 10;
+}
+
+.map-loading p {
+  font-size: 1rem;
+  color: #90caf9;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgba(79, 195, 247, 0.2);
+  border-top-color: #4fc3f7;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── Error State ───────────────────────────────────────────────────────────── */
+.map-error {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d1b2a;
+  z-index: 10;
+}
+
+.map-error-box {
+  background: #1a1a2e;
+  border: 1px solid #f44336;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 480px;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.map-error-box h2 {
+  color: #f44336;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.map-error-box p {
+  color: #bbb;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.map-error-box ol {
+  text-align: left;
+  padding-left: 20px;
+  color: #90caf9;
+  line-height: 2;
+  margin-bottom: 16px;
+}
+
+.map-error-box code {
+  background: #0d1b2a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  color: #80deea;
+}
+
+.map-error-link {
+  display: inline-block;
+  background: #1976d2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.15s;
+}
+
+.map-error-link:hover {
+  background: #1565c0;
+}
+
+/* ─── Marking Indicator ─────────────────────────────────────────────────────── */
+.marking-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(245, 124, 0, 0.95);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  pointer-events: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  white-space: nowrap;
+}

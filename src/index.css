@@ -1,0 +1,10 @@
+/* index.css — minimal globals */
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; background: #0d1b2a; }
+
+/* Ensure Google Maps autocomplete dropdown appears above map controls */
+.pac-container {
+  z-index: 9999 !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}

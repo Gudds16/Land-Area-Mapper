@@ -1,0 +1,133 @@
+.panel {
+  width: 300px;
+  padding: 20px 16px;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4fc3f7;
+  margin: 0 0 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.disclaimer {
+  font-size: 0.68rem;
+  color: #888;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+  font-style: italic;
+  border-left: 2px solid #444;
+  padding-left: 8px;
+}
+
+.section {
+  background: #16213e;
+  border-radius: 10px;
+  padding: 14px 12px;
+  margin-bottom: 10px;
+}
+
+.sectionTitle {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #90caf9;
+  margin: 0 0 10px 0;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: opacity 0.15s, transform 0.1s;
+  text-align: left;
+}
+
+.btn:last-of-type { margin-bottom: 0; }
+
+.btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.btn:not(:disabled):hover { opacity: 0.88; transform: translateY(-1px); }
+.btn:not(:disabled):active { transform: translateY(0); }
+
+.btnPrimary  { background: #1976d2; color: white; }
+.btnActive   { background: #f57c00; color: white; animation: pulse 1.5s ease-in-out infinite; }
+.btnSecondary { background: #37474f; color: #e0e0e0; }
+.btnSuccess  { background: #2e7d32; color: white; }
+.btnDanger   { background: #b71c1c; color: white; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.8; }
+}
+
+.hint {
+  font-size: 0.72rem;
+  color: #ffca28;
+  background: rgba(255, 202, 40, 0.1);
+  border: 1px solid rgba(255, 202, 40, 0.3);
+  border-radius: 6px;
+  padding: 8px;
+  margin: 2px 0 8px 0;
+  line-height: 1.4;
+}
+
+.unitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.unitBtn {
+  padding: 8px 6px;
+  border: 1.5px solid #37474f;
+  border-radius: 6px;
+  background: #0d1b2a;
+  color: #b0bec5;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+}
+
+.unitBtn:hover { border-color: #4fc3f7; color: #4fc3f7; }
+
+.unitBtnSelected {
+  background: #1976d2;
+  border-color: #42a5f5;
+  color: white;
+  font-weight: 700;
+}
+
+.pointCount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  font-size: 0.875rem;
+  color: #90caf9;
+}
+
+.pointCount strong {
+  font-size: 1.25rem;
+  color: #4fc3f7;
+}
